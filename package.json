@@ -1,0 +1,34 @@
+{
+  "name": "treegen",
+  "version": "1.0.0",
+  "description": "Generate a directory structure from a text tree diagram",
+  "main": "bin/treegen.js",
+  "bin": {
+    "treegen": "bin/treegen.js"
+  },
+  "type": "commonjs",
+  "keywords": [
+    "cli",
+    "npx",
+    "filesystem",
+    "directory",
+    "tree",
+    "generator"
+  ],
+  "author": "sifat009 <sifathaque6@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sifat009/treegen"
+  },
+  "bugs": {
+    "url": "https://github.com/sifat009/treegen/issues"
+  },
+  "homepage": "https://github.com/sifat009/treegen#readme",
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "test": "node bin/treegen.js"
+  }
+}
