@@ -5,7 +5,11 @@ Create files and folders from a simple ASCII tree diagram.
 Usage
 -----
 
-To run tree2folder with npx:
+You can use tree2folder in two ways:
+
+### Using npx (no installation required)
+
+To run tree2folder without installing:
 
 ```bash
 npx tree2folder <file-name> [<directory>]
@@ -13,6 +17,20 @@ npx tree2folder <file-name> [<directory>]
 
 - `<file-name>`: Path to the text file containing the directory tree diagram.
 - `[<directory>]`: (Optional) Target directory where the structure will be created. Defaults to the current working directory.
+
+### Global Installation
+
+Install globally using npm:
+
+```bash
+npm install -g tree2folder
+```
+
+After installation, you can use it directly:
+
+```bash
+tree2folder <file-name> [<directory>]
+```
 
 Examples
 --------
