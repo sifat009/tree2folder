@@ -1,10 +1,10 @@
 {
-  "name": "@sifat009/treegen",
+  "name": "tree2folder",
   "version": "1.0.0",
   "description": "Generate a directory structure from a text tree diagram",
-  "main": "bin/treegen.js",
+  "main": "bin/tree2folder.js",
   "bin": {
-    "treegen": "bin/treegen.js"
+    "tree2folder": "bin/tree2folder.js"
   },
   "type": "commonjs",
   "keywords": [
@@ -19,16 +19,16 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sifat009/treegen"
+    "url": "https://github.com/sifat009/tree2folder"
   },
   "bugs": {
-    "url": "https://github.com/sifat009/treegen/issues"
+    "url": "https://github.com/sifat009/tree2folder/issues"
   },
-  "homepage": "https://github.com/sifat009/treegen#readme",
+  "homepage": "https://github.com/sifat009/tree2folder#readme",
   "engines": {
     "node": ">=14"
   },
   "scripts": {
-    "test": "node bin/treegen.js"
+    "test": "node bin/tree2folder.js"
   }
 }

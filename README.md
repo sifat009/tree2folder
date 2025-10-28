@@ -1,14 +1,14 @@
-# treegen
+# tree2folder
 
 Create files and folders from a simple ASCII tree diagram.
 
 Usage
 -----
 
-To run treegen with npx:
+To run tree2folder with npx:
 
 ```bash
-npx treegen <file-name> [<directory>]
+npx tree2folder <file-name> [<directory>]
 ```
 
 - `<file-name>`: Path to the text file containing the directory tree diagram.
@@ -34,7 +34,7 @@ project
 Then run:
 
 ```bash
-npx treegen diagram.txt
+npx tree2folder diagram.txt
 ```
 
 Result: a `project` folder containing the described files and folders.
@@ -42,7 +42,7 @@ Result: a `project` folder containing the described files and folders.
 2) Create into a specific directory
 
 ```bash
-npx treegen diagram.txt ./output-folder
+npx tree2folder diagram.txt ./output-folder
 ```
 
 This creates the tree inside `./output-folder` (it will be created if it doesn't exist).
@@ -51,7 +51,7 @@ This creates the tree inside `./output-folder` (it will be created if it doesn't
 Supported input (exact)
 -----------------------
 
-Note: this version of `treegen` only supports the following ASCII-tree structure (the example below is the exact format the parser expects):
+Note: this version of `tree2folder` only supports the following ASCII-tree structure (the example below is the exact format the parser expects):
 
 ```text
 project
@@ -68,10 +68,10 @@ If your diagram uses a different style or additional decorations, convert it to 
 4) Using stdin (pipe) — handy in scripts
 
 ```bash
-cat diagram.txt | npx treegen -
+cat diagram.txt | npx tree2folder -
 ```
 
-Note: If the CLI supports `-` as a filename for stdin, the above will work; otherwise pass a filename. (Check CLI help in `bin/treegen.js` for exact stdin behavior.)
+Note: If the CLI supports `-` as a filename for stdin, the above will work; otherwise pass a filename. (Check CLI help in `bin/tree2folder.js` for exact stdin behavior.)
 
 Behavior & tips
 ---------------
