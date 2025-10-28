@@ -1,5 +1,5 @@
 {
-  "name": "treegen",
+  "name": "@sifat009/treegen",
   "version": "1.0.0",
   "description": "Generate a directory structure from a text tree diagram",
   "main": "bin/treegen.js",
