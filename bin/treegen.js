@@ -2,11 +2,11 @@
 
 const fs = require('fs');
 const path = require('path');
-const fileName = process.argv[2].trim();
-const cwd = process.argv[3] ? path.resolve(process.cwd(), process.argv[3].trim()) : process.cwd();
+const fileName = process.argv[2]?.trim();
+const cwd = process.argv[3] ? path.resolve(process.cwd(), process.argv[3]?.trim()) : process.cwd();
 
 if (!fileName) {
-    console.error('Please provide a file name as an argument.');
+    console.error('Please provide a file name as an argument.\nUsage: node treegen.js <filename>');
     process.exit(1);
 }
 
