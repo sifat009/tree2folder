@@ -1,1 +1,7 @@
 tree.txt
+.DS_Store
+node_modules/
+.env
+dist/
+.git/
+.vscode/
