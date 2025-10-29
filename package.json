@@ -1,6 +1,6 @@
 {
   "name": "tree2folder",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Generate a directory structure from a text tree diagram",
   "main": "bin/tree2folder.js",
   "bin": {
