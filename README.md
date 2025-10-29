@@ -2,6 +2,14 @@
 
 Create files and folders from a simple ASCII tree diagram.
 
+Demo
+----
+
+Watch how easy it is to create folder structures from ASCII diagrams using tree2folder!
+
+![tree2folder demo](./assets/demo.gif)
+
+
 Usage
 -----
 
