@@ -26,6 +26,7 @@ const fileContent = fs.readFileSync(filePath, 'utf-8');
 function parseDirectoryStructure(content) {
     const paths = [];
     const stack = [];
+    const [depths, visited] = [[], new Set()];
     const lines = content.split('\n')
     .map(l => l.replace(/[│├└─┬]/g, '').replace(/\s+$/, ''))
     .filter(Boolean);
@@ -33,17 +34,24 @@ function parseDirectoryStructure(content) {
     
     lines.forEach(line => {
         const depth = line.search(/[^\s]/);
-        const name = line.trim();
-
+        const name = line.trim().split(" ")?.[0];
 
         if (depth === prevDepth) {
             stack.pop();
         } else if (depth < prevDepth) {
-            stack.pop();
-            stack.pop();
+            while(depths.length && depths[depths.length - 1] >= depth) {
+                const poppedDepth = depths.pop();
+                visited.delete(poppedDepth);
+                stack.pop();
+            }
         }
 
         stack.push(name);
+
+        if (!visited.has(depth)) { 
+            visited.add(depth);
+            depths.push(depth);
+        }
 
         const _path = {path: stack.join('/').replace(/\/+/g, '/'), isFolder: name.endsWith('/') || (!name.includes('.') && !path.extname(name))};
         paths.push(_path);
