@@ -79,16 +79,16 @@ Create `mvc-app.txt` with this content:
 
 ```text
 app
-    controller
-        controller.php
-    model
-        model.php
-    view
-        view.php
-    config
-        config.php
-    public
-        public.php
+├─ controller/
+│  └─ controller.php
+├─ model/
+│  └─ model.php
+├─ view/
+│  └─ view.php
+├─ config/
+│  └─ config.php
+└─ public/
+   └─ public.php
 ```
 
 Then run:
