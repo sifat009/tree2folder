@@ -57,6 +57,18 @@ project
 └─ README.md
 ```
 
+**Or**
+
+```text
+project
+    bin/
+        start.sh
+    src/
+        index.js
+        helpers.js
+    README.md
+```
+
 Then run:
 
 ```bash
@@ -74,10 +86,10 @@ npx tree2folder diagram.txt ./output-folder
 This creates the tree inside `./output-folder` (it will be created if it doesn't exist).
 
 
-Supported input (exact)
+Supported input
 -----------------------
 
-Note: this version of `tree2folder` only supports the following ASCII-tree structure (the example below is the exact format the parser expects):
+✅ ASCII-tree structure:
 
 ```text
 project
@@ -88,16 +100,17 @@ project
 │  └─ helpers.js
 └─ README.md
 ```
+✅ Indentation-based structure:
 
-If your diagram uses a different style or additional decorations, convert it to the format above (same characters and indentation) and try again. Future versions may accept more varied input; contributions to broaden the parser are welcome.
-
-4) Using stdin (pipe) — handy in scripts
-
-```bash
-cat diagram.txt | npx tree2folder -
+```text
+project
+    bin/
+        start.sh
+    src/
+        index.js
+        helpers.js
+    README.md
 ```
-
-Note: If the CLI supports `-` as a filename for stdin, the above will work; otherwise pass a filename. (Check CLI help in `bin/tree2folder.js` for exact stdin behavior.)
 
 Behavior & tips
 ---------------
