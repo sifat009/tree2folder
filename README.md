@@ -73,6 +73,58 @@ npx tree2folder diagram.txt ./output-folder
 
 This creates the tree inside `./output-folder` (it will be created if it doesn't exist).
 
+3) MVC application structure example
+
+Create `mvc-app.txt` with this content:
+
+```text
+app
+    controller
+        controller.php
+    model
+        model.php
+    view
+        view.php
+    config
+        config.php
+    public
+        public.php
+```
+
+Then run:
+
+```bash
+npx tree2folder mvc-app.txt
+```
+
+Result: an `app` folder with a typical MVC directory structure containing separate folders for controllers, models, views, configuration, and public files.
+
+4) Simple spaced indentation example
+
+Create `simple-app.txt` with this content:
+
+```text
+app
+    controller
+        controller.php
+    model
+        model.php
+    view
+        view.php
+    config
+        config.php
+    public
+        public.php
+```
+
+Then run:
+
+```bash
+npx tree2folder simple-app.txt
+```
+
+Result: an `app` folder with the same MVC structure, demonstrating how simple spaced indentation works perfectly with tree2folder.
+
 
 Supported input (exact)
 -----------------------
@@ -104,6 +156,7 @@ Behavior & tips
 
 - Lines ending with `/` are treated as directories. Indentation (spaces) defines nesting.
 - Tree characters like `├─`, `└─`, and `│` are ignored, so you can paste output from `tree` or similar utilities and it will still work.
+- **Spacing**: Use consistent indentation with spaces (not tabs). Each level of nesting should use the same number of spaces (typically 2 or 4 spaces per level).
 - Files are created empty by default. If a path already exists, behavior depends on the CLI implementation (it may skip, warn, or overwrite). Test in a temporary folder if you are unsure.
 
 Contributing
